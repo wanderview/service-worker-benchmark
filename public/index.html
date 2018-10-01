@@ -413,6 +413,14 @@
       controls.appendChild(createButton("Register streaming-fetch worker", () => {
         sw.register('streaming-fetch.js').then(watchUpdate, updateError);
       }));
+
+      controls.appendChild(createButton("Register preloading pass-through worker", () => {
+        sw.register('preloading-pass-through-fetch.js').then(watchUpdate, updateError);
+      }));
+
+      controls.appendChild(createButton("Register preloading caching worker", () => {
+        sw.register('preloading-cached-fetch.js').then(watchUpdate, updateError);
+      }));
     };
   </script>
 </body>
